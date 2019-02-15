@@ -15,9 +15,9 @@
  */
 package com.netflix.appinfo;
 
-import com.google.inject.ImplementedBy;
-
 import java.util.Map;
+
+import com.google.inject.ImplementedBy;
 
 /**
  * Configuration information required by the instance to register with Eureka
@@ -78,7 +78,8 @@ public interface EurekaInstanceConfig {
      * need to do some pre-processing before it is ready to take traffic.
      *
      * :( public API typos are the worst. I think this was meant to be "OnInit".
-     *
+     * 指示实例是否应在向eureka注册后立即启用以获取流量。
+     * 有时，应用程序可能需要在准备接受流量之前进行一些预处理
      * 应用初始化后是否开启
      *
      * @return true to immediately start taking traffic, false otherwise.
